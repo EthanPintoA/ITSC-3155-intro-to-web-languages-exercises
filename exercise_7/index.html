@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <input id="name-input" type="text" placeholder="Enter your name" />
+    <button id="my-button">Click Me</button>
+
+    <script>
+      // A variable that selects an html tag with the id of "my-button"
+      var myButton = document.querySelector("#my-button");
+      // A variable that selects an html tag with the id of "name-input"
+      var nameInput = document.querySelector("#name-input");
+
+      // Waits until myButton is clicked, then runs an anonymous function
+      myButton.addEventListener("click", function () {
+        // Checks if there is any text in nameInput
+        if (nameInput.value !== "") {
+          // Sends the alert, "Hello {name}"
+          alert("Hello " + nameInput.value);
+        }
+      });
+    </script>
+  </body>
+</html>
